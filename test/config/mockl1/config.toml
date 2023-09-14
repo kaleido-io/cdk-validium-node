@@ -1,0 +1,39 @@
+[Eth]
+NetworkId = 1337
+SyncMode = "full"
+NoPruning = false
+NoPrefetch = false
+TxLookupLimit = 2350000
+DatabaseCache = 64
+TrieCleanCacheJournal = "triecache"
+TrieCleanCacheRejournal = 3600000000000
+TrieDirtyCache = 256
+TrieTimeout = 2000000000
+Preimages = false
+EnablePreimageRecording = false
+RPCGasCap = 804247552
+RPCEVMTimeout = 5000000000
+
+[Eth.Miner]
+GasPrice = 0
+
+[Eth.TxPool]
+GlobalSlots = 4096
+AccountSlots = 16
+GlobalQueue = 1024
+AccountQueue = 64
+
+[Node]
+DataDir = "/geth_data"
+IPCPath = "/geth_data/geth.ipc"
+HTTPHost = "0.0.0.0"
+HTTPPort = 8545
+WSHost = "0.0.0.0"
+WSPort = 8546
+HTTPModules = [ "admin", "eth", "debug", "miner", "net", "txpool", "personal", "web3", "clique" ]
+WSModules = [ "admin", "eth", "debug", "miner", "net", "txpool", "personal", "web3", "clique" ]
+
+[Node.P2P]
+NoDiscovery = true
+MaxPeers = 25
+ListenAddr = ":30303"
